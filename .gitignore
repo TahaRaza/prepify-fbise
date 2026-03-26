@@ -1,43 +1,64 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# ========================
+# Node & Dependencies
+# ========================
 node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
 
-# Expo
+# ========================
+# Expo & Metro Cache
+# ========================
 .expo/
 dist/
 web-build/
-expo-env.d.ts
+.expo-shared/
+.rncache
+*.jsbundle
 
-# Native
-.kotlin/
-*.orig.*
+# ========================
+# EAS Builds & Artifacts
+# ========================
+# Prevents uploading massive Android/iOS app files to GitHub
+*.apk
+*.aab
+*.tar.gz
+*.ipa
+
+# ========================
+# Native Code & Credentials
+# ========================
+# Ignore auto-generated native folders (since you use Expo Go/EAS)
+android/
+ios/
+
+# Ignore keystores and provisioning profiles
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
-
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
-.DS_Store
 *.pem
+credentials.json
 
-# local env files
+# ========================
+# Environment Variables
+# ========================
+# CRITICAL: Keeps your Supabase URL and Anon Keys safe!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env*.local
 
-# typescript
-*.tsbuildinfo
-
-app-example
-
-# generated native folders
-/ios
-/android
+# ========================
+# OS & Editor Files
+# ========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
