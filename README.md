@@ -1,106 +1,106 @@
 # Prepify FBISE: Assessment Hub 🎓⚡
 
-Prepify is a premium, AI-powered React Native application designed specifically for the Federal Board of Intermediate and Secondary Education (FBISE) curriculum in Pakistan. It empowers teachers to seamlessly generate standard-compliant exam papers and allows students to practice live question banks.
+[![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
+[![Supabase](https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=3ECF8E)](https://supabase.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 🌟 Key Features
+**Prepify** is a premium, AI-integrated assessment ecosystem tailored for the **Federal Board of Intermediate and Secondary Education (FBISE)** in Pakistan. Designed to bridge the gap between curriculum standards and digital accessibility, Prepify empowers educators with instant exam generation and provides students with a high-fidelity practice environment.
 
-- **Role-Based Architecture:** Secure routing for both `Admin/Teacher` and `Student` roles using Supabase Authentication.
-- **Premium Dynamic UI:** A custom-built design system featuring _Electric Amber_, _Sage Teal_, and _Text Charcoal_ that automatically adapts to system **Light and Dark modes**.
-- **Advanced Math Rendering:** Integrated `react-native-mathjax` to flawlessly parse and render complex LaTeX equations and chemical formulas across both Light and Dark themes.
-- **One-Click PDF Export:** Teachers can instantly generate beautifully formatted, print-ready PDF exam papers (complete with instructions, headers, and perfectly rendered math) using `expo-print`.
-- **Persistent Sessions:** Seamless login experience that securely remembers users using background session initialization.
-- **Smart Chapter Filtering:** Dynamically fetch and filter questions based on specific book chapters or full-book SLO (Student Learning Outcomes) mode.
+---
 
-## 🛠️ Tech Stack
+## 📸 The Experience
 
-- **Frontend:** React Native, Expo (Expo Router for file-based navigation)
-- **Backend & Auth:** Supabase (PostgreSQL, Row Level Security, Triggers)
-- **Styling:** Custom dynamic theming engine (No external UI libraries)
-- **Utilities:** `react-native-mathjax`, `expo-print`, `expo-sharing`
+| **Premium Design System** | **Advanced Math Rendering** | **One-Click PDF Export** |
+| :--- | :--- | :--- |
+| Custom *Electric Amber* & *Sage Teal* palette with native Light/Dark mode support. | Flawless LaTeX and chemical formula parsing via `react-native-mathjax`. | Print-ready, formatted PDFs including headers and SLO-aligned instructions. |
 
-## 📂 Project Structure
+---
 
-```
+## 🚀 Key Engineering Features
+
+### 🔐 Multi-Tenant Architecture
+*   **Role-Based Access Control (RBAC):** Distinct workflows for `Admin/Teachers` (Management) and `Students` (Practice).
+*   **Secure Authentication:** Powered by Supabase Auth with Row Level Security (RLS) to ensure data sovereignty.
+*   **Persistent Sessions:** Background session initialization for a frictionless "Open and Go" user experience.
+
+### 🧪 Pedagogical Intelligence
+*   **SLO-Driven Filtering:** Dynamically fetch questions based on specific book chapters or full-book Student Learning Outcomes (SLO).
+*   **Dynamic Exam Engine:** Generates standard-compliant papers from a PostgreSQL-backed question bank in seconds.
+
+### 🎨 Design & Performance
+*   **Bespoke UI Engine:** Built without external UI libraries to ensure maximum performance and a unique brand identity.
+*   **Cross-Platform Consistency:** Unified rendering of complex mathematical equations across Android and iOS.
+
+---
+
+## 🛠️ Technical Stack
+
+*   **Frontend:** React Native with **Expo Router** (File-based navigation)
+*   **Backend:** **Supabase** (PostgreSQL, Real-time triggers, Storage)
+*   **Typesetting:** LaTeX via MathJax
+*   **Infrastructure:** Expo Application Services (EAS) for cloud builds
+
+---
+
+## 📂 System Architecture
+
+```bash
 prepify-fbise/
-├── app/
-│ ├── \_layout.jsx # Global routing and session checks
-│ ├── index.js # Splash Screen & Auth routing
-│ └── screens/
-│ ├── login.js # Authentication
-│ ├── signup.js # Account creation
-│ ├── home.js # Admin Dashboard
-│ ├── studentDashboard.js # Student Dashboard
-│ ├── subjects.js # Subject selection with Premium locks
-│ ├── configuration.js # Exam setup and chapter selection
-│ ├── results.js # Exam generation and PDF export
-│ └── profile.js # User settings and logout
-├── assets/
-│ └── images/ # App icons, splash screens, and branding
-├── constants/
-│ └── theme.js # Core Light/Dark mode design system
-├── supabaseClient.js # Supabase connection initialization
-├── app.json # Expo configuration and EAS build settings
-└── package.json
+├── app/                  # Expo Router file-based navigation
+│   ├── _layout.jsx       # Global providers & session logic
+│   └── screens/          # Modularized functional views
+├── assets/               # Branding & Design assets
+├── constants/            # Theme Engine (Amber/Teal system)
+├── supabaseClient.js     # Infrastructure configuration
+├── app.json              # Expo/EAS manifest
+└── package.json          # Dependency management
 ```
 
-## 🚀 Installation & Setup
+---
 
-### 1. Prerequisites
+## ⚙️ Installation & Setup
 
-Ensure you have [Node.js](https://nodejs.org/) installed, along with the Expo CLI and EAS CLI:
-
-```
+### 1. Global Requirements
+```bash
 npm install -g expo-cli eas-cli
 ```
 
-### 2. Clone the Repository
-
-```
+### 2. Deployment
+```bash
+# Clone the repository
 git clone https://github.com/TahaRaza/prepify-fbise.git
 cd prepify-fbise
-```
 
-### 3. Install Dependencies
-
-```
+# Install dependencies
 npm install
+
+# Configure Environment
+echo "EXPO_PUBLIC_SUPABASE_URL=your_url" >> .env
+echo "EXPO_PUBLIC_SUPABASE_ANON_KEY=your_key" >> .env
+
+# Launch Development Server
+npx expo start
 ```
 
-### 4. Environment Variables
-
-Create a `.env` file in the root directory and add your Supabase credentials:
-
-```env
-EXPO_PUBLIC_SUPABASE_URL=your_supabase_project_url
-EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+### 3. Build for Android (APK)
+This project is pre-configured for **EAS Preview** builds:
+```bash
+eas build -p android --profile preview
 ```
 
-### 5. Run the App Locally
+---
 
-Start the Expo development server:
+## 👨‍💻 Developed By
 
-```
-npx expo start -c
-```
+**Taha Hasnain Raza**  
+*Computer Engineer | AI & MLOps Specialist*  
+📍 Lahore, Pakistan
 
-_Scan the QR code with the Expo Go app on your physical device, or press `a` to open in an Android Emulator._
+> **Note:** This project is part of a mission to modernize the Pakistani educational landscape through scalable, AI-driven infrastructure.
 
-## 📦 Building the APK (Android)
+---
 
-This project is fully configured for Expo Application Services (EAS). To generate a standalone `.apk` file that can be installed on any Android device:
-
-1. Log in to your Expo account:
-   ```
-   eas login
-   ```
-2. Trigger the cloud build:
-   ```
-   eas build -p android --profile preview
-   ```
-3. Once the build finishes, download the APK from the provided Expo dashboard link!
-
-## 👤 Author
-
-**Taha Hasnain Raza** | Computer Engineering Graduate | AI & MLOps Enthusiast
-
-- Lahore, Pakistan
+<p align="center">
+  Built with ❤️ for the Pakistani Education Community.
+</p>
