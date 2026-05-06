@@ -93,17 +93,6 @@ eas build -p android --profile preview
 ```
 
 ---
-
-## 👨‍💻 Developed By
-
-Changing it to **Full-Stack AI Engineer** is a smart, strategic move. 
-
-As a fresh graduate, "Computer Engineer" describes your degree, but **"Full-Stack AI Engineer"** describes your **value**. It signals that you don't just build models in a notebook; you can build the database, the backend, the mobile interface, and the deployment pipeline. For a project like **Prepify**, which touches everything from Supabase to React Native to LaTeX rendering, this title fits perfectly.
-
-Here is a refined "Author" section that sounds more authoritative and fits your new title:
-
----
-
 ## 👨‍💻 Developed By
 
 **Taha Hasnain Raza**  
