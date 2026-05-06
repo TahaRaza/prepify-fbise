@@ -9,12 +9,15 @@
 
 ---
 
-## 📸 The Experience
+## 📱 Interface Preview
 
-| **Premium Design System** | **Advanced Math Rendering** | **One-Click PDF Export** |
-| :--- | :--- | :--- |
-| Custom *Electric Amber* & *Sage Teal* palette with native Light/Dark mode support. | Flawless LaTeX and chemical formula parsing via `react-native-mathjax`. | Print-ready, formatted PDFs including headers and SLO-aligned instructions. |
+| Splash Screen | Login & Auth | Student Dashboard |
+| :---: | :---: | :---: |
+| <img src="assets/showcase/SplashScreenShowcase.jpeg" width="250" /> | <img src="assets/showcase/LoginSC.jpeg" width="250" /> | <img src="assets/showcase/StudentDashboardSC.jpeg" width="250" /> |
 
+| Select Subject | Configuration | Exam Generation |
+| :---: | :---: | :---: |
+| <img src="assets/showcase/SubjectPage.jpeg" width="250" /> | <img src="assets/showcase/ConfigSC.jpeg" width="250" /> | <img src="assets/showcase/ExamSC.jpeg" width="250" /> |
 ---
 
 ## 🚀 Key Engineering Features
